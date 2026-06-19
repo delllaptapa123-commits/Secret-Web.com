@@ -29,6 +29,46 @@
 
 <hr>
 
+<!-- KODE TOMBOL PILIHAN USIA -->
+<div style="text-align: center; margin-top: 50px; font-family: sans-serif; color: white; background-color: #111; padding: 20px; border-radius: 8px;">
+    <h2>Pilih Usia Anda untuk Melanjutkan:</h2>
+    
+    <!-- Tombol Opsi Usia -->
+    <button onclick="pilihUsia(1)" style="padding: 10px 20px; margin: 5px; cursor: pointer;">[1] Anak-anak</button>
+    <button onclick="pilihUsia(2)" style="padding: 10px 20px; margin: 5px; cursor: pointer;">[2] Remaja</button>
+    <button onclick="pilihUsia(3)" style="padding: 10px 20px; margin: 5px; cursor: pointer;">[3] Dewasa</button>
+</div>
+
+<!-- KODE SCRIPT UNTUK MEMPROSES PILIHAN -->
+<script>
+function pilihUsia(opsi) {
+    if (opsi === 1) {
+        // Jika memilih Anak-anak
+        alert("Maaf, tapi anda tidak diizinkan untuk mengeksplorasi website ini!");
+    } 
+    else if (opsi === 2) {
+        // Jika memilih Remaja, muncul pertanyaan "Anda Yakin?" dengan 4 opsi
+        let yakin = prompt("Anda Yakin?\nKetik angka pilihan Anda:\n[1] Ya\n[2] Tidak\n[3] Mungkin\n[4] Ragu-ragu");
+        
+        if (yakin === "1") {
+            alert("Baiklah, berhati-hatilah...");
+            // Di sini Anda bisa mengizinkan mereka masuk ke konten utama
+        } else if (yakin === "2" || yakin === "4") {
+            alert("Pilihan yang bijak. Sebaiknya Anda kembali.");
+        } else if (yakin === "3") {
+            alert("Jangan ragu, pikirkan baik-baik terlebih dahulu.");
+        } else {
+            alert("Pilihan tidak valid.");
+        }
+    } 
+    else if (opsi === 3) {
+        // Jika memilih Dewasa
+        alert("Selamat datang... Bersiaplah dengan apa yang akan Anda lihat.");
+    }
+}
+</script>
+
+    
 <!--Stok-->
 
 <br>
